@@ -3,7 +3,6 @@ package com.ajocard.fastlanestarter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import com.crashlytics.android.Crashlytics
 import io.fabric.sdk.android.Fabric
 
@@ -17,7 +16,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun forceCrash(view: View) {
-        Toast.makeText(this, "Crash Fixed", Toast.LENGTH_SHORT).show()
+        throw RuntimeException("This is a crash")
     }
 
 }
